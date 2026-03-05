@@ -1,0 +1,213 @@
+# Kommo API Reference
+
+> Official API reference for Kommo CRM. Covers V4 general methods, Files API,
+> Chats API, and Kommo AI API. All endpoints are authenticated via OAuth 2.0.
+
+## API V4 General Methods
+
+- [About Kommo API](https://developers.kommo.com/reference/kommo-api-reference): Overview and fundamentals of the Kommo CRM API
+- [Account](https://developers.kommo.com/reference/account): Account-level endpoints
+  - [Account parameters](https://developers.kommo.com/reference/account-parameters)
+- [OAuth 2.0](https://developers.kommo.com/reference/oauth20): Authentication via OAuth 2.0
+  - [Get/renew an access token](https://developers.kommo.com/reference/get-token)
+- [Incoming leads](https://developers.kommo.com/reference/incoming-leads): Manage incoming leads
+  - [Incoming leads list](https://developers.kommo.com/reference/incoming-leads-list)
+  - [Get an incoming lead by its UID](https://developers.kommo.com/reference/incoming-lead-uid)
+  - [Add incoming leads from the type sip (call)](https://developers.kommo.com/reference/incoming-leads-call)
+  - [Add incoming leads from the type form](https://developers.kommo.com/reference/incoming-leads-form)
+  - [Accept incoming leads](https://developers.kommo.com/reference/accepting-incoming-leads)
+  - [Decline incoming leads](https://developers.kommo.com/reference/declining-incoming-leads)
+  - [Link incoming leads](https://developers.kommo.com/reference/linking-incoming-leads)
+  - [Incoming leads summary information](https://developers.kommo.com/reference/incoming-leads-summary)
+  - [Metadata objects description](https://developers.kommo.com/reference/metadata)
+- [Leads](https://developers.kommo.com/reference/leads): CRUD operations for leads
+  - [Leads list](https://developers.kommo.com/reference/leads-list)
+  - [Get a lead by ID](https://developers.kommo.com/reference/getting-a-lead-by-its-id)
+  - [Add leads](https://developers.kommo.com/reference/adding-leads)
+  - [Update leads](https://developers.kommo.com/reference/updating-leads)
+  - [Update a lead](https://developers.kommo.com/reference/updating-single-lead)
+  - [Complex addition of leads with contact and company](https://developers.kommo.com/reference/complex-leads)
+  - [Loss reasons list](https://developers.kommo.com/reference/loss-reasons)
+  - [Loss reason by ID](https://developers.kommo.com/reference/loss-reason-by-id)
+- [Leads pipelines and stages](https://developers.kommo.com/reference/leads-pipelines-and-stages): Manage pipelines and their stages
+  - [Pipelines list](https://developers.kommo.com/reference/pipelines-list)
+  - [Get a pipeline by its ID](https://developers.kommo.com/reference/get-pipeline-by-id)
+  - [Add pipelines](https://developers.kommo.com/reference/add-pipelines)
+  - [Edit a pipeline](https://developers.kommo.com/reference/edit-pipeline)
+  - [Delete a pipeline](https://developers.kommo.com/reference/delete-pipeline)
+  - [Pipeline stages list](https://developers.kommo.com/reference/stages-list)
+  - [Get a pipeline stage data by its ID](https://developers.kommo.com/reference/get-stage)
+  - [Add stages to the pipeline](https://developers.kommo.com/reference/add-stages)
+  - [Pipeline stage edit](https://developers.kommo.com/reference/edit-stage)
+  - [Delete a pipeline stage](https://developers.kommo.com/reference/deleting-stage)
+  - [Available stage colors](https://developers.kommo.com/reference/stage-colors)
+- [Contacts](https://developers.kommo.com/reference/contacts): CRUD operations for contacts
+  - [Contacts list](https://developers.kommo.com/reference/contacts-list)
+  - [Get a contact by ID](https://developers.kommo.com/reference/get-contact)
+  - [Add contacts](https://developers.kommo.com/reference/add-contacts)
+  - [Update contacts](https://developers.kommo.com/reference/update-contacts)
+  - [Update a contact](https://developers.kommo.com/reference/update-contact)
+- [Companies](https://developers.kommo.com/reference/companies): CRUD operations for companies
+  - [Companies list](https://developers.kommo.com/reference/companies-list)
+  - [Get a company by ID](https://developers.kommo.com/reference/get-company)
+  - [Add companies](https://developers.kommo.com/reference/add-companies)
+  - [Update companies](https://developers.kommo.com/reference/update-companies)
+  - [Update a company](https://developers.kommo.com/reference/updating-company)
+- [Lists](https://developers.kommo.com/reference/lists): Manage catalogs/lists and their elements
+  - [Get a list of lists](https://developers.kommo.com/reference/get-lists)
+  - [Get a list](https://developers.kommo.com/reference/get-list)
+  - [Add lists](https://developers.kommo.com/reference/add-lists)
+  - [Edit lists](https://developers.kommo.com/reference/editing-lists)
+  - [Edit a list](https://developers.kommo.com/reference/editing-list)
+  - [Get list elements](https://developers.kommo.com/reference/get-list-elements)
+  - [Get a list element](https://developers.kommo.com/reference/get-list-element)
+  - [Add list elements](https://developers.kommo.com/reference/add-list-elements)
+  - [Edit list elements](https://developers.kommo.com/reference/edit-list-elements)
+  - [Edit a list element](https://developers.kommo.com/reference/edit-list-element)
+- [Custom fields and field groups](https://developers.kommo.com/reference/custom-fields): Manage custom fields and groups per entity
+  - [Custom fields list](https://developers.kommo.com/reference/custom-field-by-entity)
+  - [Get an entity field by its ID](https://developers.kommo.com/reference/custom-fields-by-id)
+  - [Add custom fields](https://developers.kommo.com/reference/add-custom-fields)
+  - [Update custom fields](https://developers.kommo.com/reference/update-custom-fields)
+  - [Update a custom field](https://developers.kommo.com/reference/update-custom-field)
+  - [Custom fields list of a catalog](https://developers.kommo.com/reference/custom-fields-list-of-list)
+  - [Get a catalog field by its ID](https://developers.kommo.com/reference/get-list-custom-field)
+  - [Add a custom field to a catalog](https://developers.kommo.com/reference/adding-custom-field)
+  - [Update custom fields of a catalog](https://developers.kommo.com/reference/update-custom-fields-list)
+  - [Update a custom field of a catalog](https://developers.kommo.com/reference/updating-custom-field-list)
+  - [Delete a custom field](https://developers.kommo.com/reference/delete-custom-field)
+  - [List of entity field groups](https://developers.kommo.com/reference/list-of-entity-field-groups)
+  - [Get an entity field group by ID](https://developers.kommo.com/reference/get-a-fields-group-by-id)
+  - [Add field groups](https://developers.kommo.com/reference/add-field-groups)
+  - [Edit a field group](https://developers.kommo.com/reference/edit-field-groups)
+  - [Delete a field group](https://developers.kommo.com/reference/delete-a-field-group)
+- [Users and roles](https://developers.kommo.com/reference/users-and-roles): Manage users and their roles
+  - [Users list](https://developers.kommo.com/reference/users-list)
+  - [Get user data by its ID](https://developers.kommo.com/reference/get-user-by-id)
+  - [Add users](https://developers.kommo.com/reference/add-users)
+  - [User roles list](https://developers.kommo.com/reference/user-roles-list)
+  - [Get a role data by its ID](https://developers.kommo.com/reference/get-role-data-by-id)
+  - [Add roles](https://developers.kommo.com/reference/adding-roles)
+  - [Edit roles](https://developers.kommo.com/reference/edit-roles)
+  - [Delete a role](https://developers.kommo.com/reference/deleting-role)
+- [Tasks](https://developers.kommo.com/reference/tasks): Create and manage tasks
+  - [Tasks list](https://developers.kommo.com/reference/tasks-list)
+  - [Get a task by its ID](https://developers.kommo.com/reference/task-id)
+  - [Add tasks](https://developers.kommo.com/reference/add-tasks)
+  - [Edit tasks](https://developers.kommo.com/reference/edit-tasks)
+  - [Edit a single task](https://developers.kommo.com/reference/edit-task)
+- [Events](https://developers.kommo.com/reference/events): Access CRM activity events
+  - [Events list](https://developers.kommo.com/reference/events-list)
+  - [Get an event by its ID](https://developers.kommo.com/reference/get-event)
+  - [Get events types](https://developers.kommo.com/reference/get-events-types)
+  - [Events types](https://developers.kommo.com/reference/events-types)
+  - [Events filtration](https://developers.kommo.com/reference/events-filtration)
+- [Notes](https://developers.kommo.com/reference/notes): Notes on entities
+  - [Get entity's notes list](https://developers.kommo.com/reference/notes-by-entity-id)
+  - [Notes list by the entity type](https://developers.kommo.com/reference/notes-list-entity)
+  - [Get a note by its ID](https://developers.kommo.com/reference/note-by-id)
+  - [Add notes](https://developers.kommo.com/reference/add-notes)
+  - [Edit notes](https://developers.kommo.com/reference/edit-notes)
+  - [Edit a note](https://developers.kommo.com/reference/edit-note)
+  - [Pin a note](https://developers.kommo.com/reference/pin-note)
+  - [Unpin a note](https://developers.kommo.com/reference/unpin-note)
+  - [Notes types](https://developers.kommo.com/reference/notes-types)
+- [Tags](https://developers.kommo.com/reference/tags): Manage entity tags
+  - [List of entity tags](https://developers.kommo.com/reference/list-of-entity-tags)
+  - [Create tags for a particular entity type](https://developers.kommo.com/reference/add-tags)
+  - [Add tags to entities](https://developers.kommo.com/reference/update-tags)
+  - [Add tags to a single entity](https://developers.kommo.com/reference/update-tags-single-entity)
+  - [Tag colors](https://developers.kommo.com/reference/tag-colors)
+- [Links between entities](https://developers.kommo.com/reference/link-entities): Link and unlink CRM entities
+  - [Linked entities list](https://developers.kommo.com/reference/linked-entities)
+  - [Link entities](https://developers.kommo.com/reference/linking-entities)
+  - [Unlink entities](https://developers.kommo.com/reference/unlinking-entities)
+- [Salesbot](https://developers.kommo.com/reference/salesbot): Control Salesbot execution
+  - [Launch Salesbots](https://developers.kommo.com/reference/launch-salesbots)
+  - [Stop Salesbot](https://developers.kommo.com/reference/stop-salesbot)
+  - [SalesBot widget block execution confirmation](https://developers.kommo.com/reference/salesbot-widget-block-execution-confirmation)
+- [Sources](https://developers.kommo.com/reference/sources): Manage lead sources and Website chat buttons
+  - [Get a list of sources](https://developers.kommo.com/reference/get-sources)
+  - [Get a source by its ID](https://developers.kommo.com/reference/get-source)
+  - [Add sources](https://developers.kommo.com/reference/add-sources)
+  - [Update a source](https://developers.kommo.com/reference/update-source)
+  - [Update sources](https://developers.kommo.com/reference/update-sources)
+  - [Delete a source](https://developers.kommo.com/reference/delete-source)
+  - [Delete sources](https://developers.kommo.com/reference/delete-sources)
+  - [Get a list of Website chat button objects](https://developers.kommo.com/reference/get-list-crm-plugin)
+  - [Get a Website chat button](https://developers.kommo.com/reference/get-crm-plugin)
+  - [Add Website chat button](https://developers.kommo.com/reference/add-crm-plugin)
+  - [Connect online chat to Website chat button](https://developers.kommo.com/reference/connect-online-chat-to-crm-plugin)
+  - [Update Website chat button](https://developers.kommo.com/reference/update-crm-plugin)
+- [Templates](https://developers.kommo.com/reference/templates): Manage message templates including WhatsApp
+  - [Get a list of templates](https://developers.kommo.com/reference/get-templates)
+  - [Get a template by ID](https://developers.kommo.com/reference/get-template)
+  - [Add templates](https://developers.kommo.com/reference/add-templates)
+  - [Edit templates](https://developers.kommo.com/reference/edit-templates)
+  - [Submit a WhatsApp template for moderation](https://developers.kommo.com/reference/submit-a-whatsapp-template-for-moderation)
+  - [Edit a WhatsApp template status](https://developers.kommo.com/reference/edit-template-status)
+  - [Delete templates](https://developers.kommo.com/reference/delete-templates)
+  - [Delete a template](https://developers.kommo.com/reference/delete-template)
+- [Webhooks](https://developers.kommo.com/reference/webhooks): Register and manage webhooks
+  - [List of webhooks](https://developers.kommo.com/reference/list-webhooks)
+  - [Add a webhook](https://developers.kommo.com/reference/add-webhooks)
+  - [Delete a webhook](https://developers.kommo.com/reference/delete-webhook)
+  - [Webhook events](https://developers.kommo.com/reference/webhook-events)
+- [Widgets](https://developers.kommo.com/reference/widgets): Install and manage widgets
+  - [Widgets list](https://developers.kommo.com/reference/widgets-list)
+  - [Get the widget info by its code](https://developers.kommo.com/reference/widget-by-code)
+  - [Install the widget into the account](https://developers.kommo.com/reference/installing-the-widget-into-the-account)
+  - [Uninstall widget](https://developers.kommo.com/reference/uninstall-widget)
+- [Conversations](https://developers.kommo.com/reference/conversations): Manage chat conversations
+  - [Get a conversation by ID](https://developers.kommo.com/reference/get-conversation)
+  - [Close a conversation by ID](https://developers.kommo.com/reference/close-conversation)
+- [Calls](https://developers.kommo.com/reference/calls): Log and notify call events
+  - [Add call note](https://developers.kommo.com/reference/add-calls)
+  - [Add call notification](https://developers.kommo.com/reference/add-call-notifications)
+
+## Files API
+
+- [Files API capabilities](https://developers.kommo.com/reference/files-api): Overview and key features of the Files API
+  - [Files API key features](https://developers.kommo.com/reference/files-api-key-features)
+- [Files API methods](https://developers.kommo.com/reference/files-methods): All Files API endpoints
+  - [Getting started](https://developers.kommo.com/reference/your-drive)
+  - [Get a file by UUID](https://developers.kommo.com/reference/file-uuid)
+  - [Get a list of files](https://developers.kommo.com/reference/get-files)
+  - [Create a file upload session](https://developers.kommo.com/reference/create-session)
+  - [Upload a part of the file](https://developers.kommo.com/reference/upload-file)
+  - [Edit a file](https://developers.kommo.com/reference/edit-file)
+  - [Delete files](https://developers.kommo.com/reference/delete-files)
+  - [Restore files](https://developers.kommo.com/reference/restore-files)
+  - [Get a version of file](https://developers.kommo.com/reference/get-version)
+  - [Get files attached to an entity](https://developers.kommo.com/reference/get-files-entity)
+  - [Attach files to an entity](https://developers.kommo.com/reference/attached-to-entity)
+  - [Detach files from an entity](https://developers.kommo.com/reference/detach-files)
+  - [Get entities associated with a file](https://developers.kommo.com/reference/get-entities-with-file)
+
+## Chats API
+
+- [Five steps to send a message](https://developers.kommo.com/reference/send-message-guide): Step-by-step guide to send a message via Chats API
+- [Register a chat channel](https://developers.kommo.com/reference/register-channel): How to register a new chat channel
+- [Chats API methods](https://developers.kommo.com/reference/chats-api-methods): All Chats API endpoints
+  - [Connect chat channel](https://developers.kommo.com/reference/connect-channel)
+  - [Create new chat](https://developers.kommo.com/reference/create-chat)
+  - [Link chat to contact](https://developers.kommo.com/reference/link-chat-contact)
+  - [Import, send and edit messages](https://developers.kommo.com/reference/send-import-messages)
+  - [Get chat history](https://developers.kommo.com/reference/chat-history)
+  - [Get contact chats](https://developers.kommo.com/reference/get-contact-chats)
+  - [Update message delivery status](https://developers.kommo.com/reference/update-delivery-status)
+  - [Transfer typing information](https://developers.kommo.com/reference/typing-info)
+  - [Send or withdraw reactions](https://developers.kommo.com/reference/send-reactions)
+  - [Disconnect chat channel](https://developers.kommo.com/reference/disconnect-channel)
+- [Chats API account ID](https://developers.kommo.com/reference/chat-api-accountid)
+- [Chats API authorization](https://developers.kommo.com/reference/chats-api-authorization-and-headers)
+- [Chats API webhooks](https://developers.kommo.com/reference/receiving-chat-webhooks)
+
+## Kommo AI API
+
+- [Kommo AI key features](https://developers.kommo.com/reference/ai-features): Overview of Kommo AI capabilities
+- [Kommo AI API methods](https://developers.kommo.com/reference/ai-api-methods): All Kommo AI endpoints
+  - [Add a source of the type URL](https://developers.kommo.com/reference/ai-add-source-url)
+  - [Add a source of the type file](https://developers.kommo.com/reference/ai-add-source-file)
+  - [Add a source of the type text](https://developers.kommo.com/reference/ai-add-source-text)
+  - [Launch import of products from CRM to AI](https://developers.kommo.com/reference/launch-import-of-products-from-crm-to-ai)
